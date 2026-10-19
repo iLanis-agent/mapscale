@@ -1,0 +1,421 @@
+[
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "2.5",
+   "cm"
+  ],
+  "expected": "2.5 cm on a 1:24000 map is 600 m on the ground, which is 0.6 km or 0.37 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "1",
+   "in"
+  ],
+  "expected": "1 in on a 1:24000 map is 609.6 m on the ground, which is 0.61 km or 0.38 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   50000,
+   "10",
+   "mm"
+  ],
+  "expected": "10 mm on a 1:50000 map is 500 m on the ground, which is 0.5 km or 0.31 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   1,
+   "1",
+   "mm"
+  ],
+  "expected": "1 mm on a 1:1 map is under 0.01 m on the ground, which is under 0.01 km or under 0.01 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   100000000,
+   "1000000",
+   "in"
+  ],
+  "expected": "1000000 in on a 1:100000000 map is 2540000000000 m on the ground, which is 2540000000 km or 1578282828.28 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   250000,
+   "0.001",
+   "mm"
+  ],
+  "expected": "0.001 mm on a 1:250000 map is 0.25 m on the ground, which is under 0.01 km or under 0.01 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   63360,
+   "1",
+   "in"
+  ],
+  "expected": "1 in on a 1:63360 map is 1609.34 m on the ground, which is 1.61 km or 1 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   25000,
+   " 4 ",
+   "cm"
+  ],
+  "expected": "4 cm on a 1:25000 map is 1000 m on the ground, which is 1 km or 0.62 mi (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "2.5",
+   "ft"
+  ],
+  "expected": "ERR:map length unit must be one of mm, cm, in"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "0",
+   "cm"
+  ],
+  "expected": "ERR:map length must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "2.5555",
+   "cm"
+  ],
+  "expected": "ERR:map length must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "-2",
+   "cm"
+  ],
+  "expected": "ERR:map length must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "1e3",
+   "cm"
+  ],
+  "expected": "ERR:map length must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   0,
+   "2",
+   "cm"
+  ],
+  "expected": "ERR:scale must be a whole number from 1 to 100000000"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   100000001,
+   "2",
+   "cm"
+  ],
+  "expected": "ERR:scale must be a whole number from 1 to 100000000"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000.5,
+   "2",
+   "cm"
+  ],
+  "expected": "ERR:scale must be a whole number from 1 to 100000000"
+ },
+ {
+  "fn": "realTruth",
+  "args": [
+   24000,
+   "1000001",
+   "cm"
+  ],
+  "expected": "ERR:map length must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "600",
+   "m"
+  ],
+  "expected": "600 m on the ground is 25 mm on a 1:24000 map, which is 2.5 cm or 0.98 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "1",
+   "mi"
+  ],
+  "expected": "1 mi on the ground is 67.06 mm on a 1:24000 map, which is 6.71 cm or 2.64 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   50000,
+   "5",
+   "km"
+  ],
+  "expected": "5 km on the ground is 100 mm on a 1:50000 map, which is 10 cm or 3.94 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   1,
+   "1",
+   "m"
+  ],
+  "expected": "1 m on the ground is 1000 mm on a 1:1 map, which is 100 cm or 39.37 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   100000000,
+   "1",
+   "m"
+  ],
+  "expected": "1 m on the ground is under 0.01 mm on a 1:100000000 map, which is under 0.01 cm or under 0.01 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "100",
+   "ft"
+  ],
+  "expected": "100 ft on the ground is 1.27 mm on a 1:24000 map, which is 0.13 cm or 0.05 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   250000,
+   "0.001",
+   "m"
+  ],
+  "expected": "0.001 m on the ground is under 0.01 mm on a 1:250000 map, which is under 0.01 cm or under 0.01 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "0.001",
+   "km"
+  ],
+  "expected": "0.001 km on the ground is 0.04 mm on a 1:24000 map, which is under 0.01 cm or under 0.01 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   63360,
+   "1",
+   "mi"
+  ],
+  "expected": "1 mi on the ground is 25.4 mm on a 1:63360 map, which is 2.54 cm or 1 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "1000000",
+   "mi"
+  ],
+  "expected": "1000000 mi on the ground is 67056000 mm on a 1:24000 map, which is 6705600 cm or 2640000 in (each figure rounded to 2 decimal places)."
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "600",
+   "cm"
+  ],
+  "expected": "ERR:ground distance unit must be one of m, km, ft, mi"
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "0",
+   "m"
+  ],
+  "expected": "ERR:ground distance must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   0,
+   "5",
+   "m"
+  ],
+  "expected": "ERR:scale must be a whole number from 1 to 100000000"
+ },
+ {
+  "fn": "mapTruth",
+  "args": [
+   24000,
+   "abc",
+   "m"
+  ],
+  "expected": "ERR:ground distance must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "2.5",
+   "cm",
+   "600",
+   "m"
+  ],
+  "expected": "2.5 cm on the map for 600 m on the ground is a scale of exactly 1:24000."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "in",
+   "1",
+   "mi"
+  ],
+  "expected": "1 in on the map for 1 mi on the ground is a scale of exactly 1:63360."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "in",
+   "1",
+   "km"
+  ],
+  "expected": "1 in on the map for 1 km on the ground is a scale of about 1:39370."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "mm",
+   "1",
+   "m"
+  ],
+  "expected": "1 mm on the map for 1 m on the ground is a scale of exactly 1:1000."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "3",
+   "cm",
+   "1",
+   "m"
+  ],
+  "expected": "3 cm on the map for 1 m on the ground is a scale of about 1:33."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "10",
+   "cm",
+   "1",
+   "ft"
+  ],
+  "expected": "10 cm on the map for 1 ft on the ground is a scale of about 1:3."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "cm",
+   "1",
+   "cm"
+  ],
+  "expected": "ERR:ground distance unit must be one of m, km, ft, mi"
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "2",
+   "cm",
+   "1",
+   "ft"
+  ],
+  "expected": "2 cm on the map for 1 ft on the ground is a scale of about 1:15."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "mm",
+   "0.001",
+   "m"
+  ],
+  "expected": "1 mm on the map for 0.001 m on the ground is a scale of exactly 1:1."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1000000",
+   "in",
+   "0.001",
+   "ft"
+  ],
+  "expected": "1000000 in on the map for 0.001 ft on the ground is an enlargement of about 83333333:1."
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "0",
+   "cm",
+   "1",
+   "m"
+  ],
+  "expected": "ERR:map length must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "cm",
+   "0",
+   "m"
+  ],
+  "expected": "ERR:ground distance must be a positive number with at most 3 decimals, up to 1000000"
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "yd",
+   "1",
+   "m"
+  ],
+  "expected": "ERR:map length unit must be one of mm, cm, in"
+ },
+ {
+  "fn": "scaleTruth",
+  "args": [
+   "1",
+   "cm",
+   "1",
+   "yd"
+  ],
+  "expected": "ERR:ground distance unit must be one of m, km, ft, mi"
+ }
+]
