@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map Scale Math - map and model scale arithmetic</title>
+<style>
+  :root { --accent:#2a7a6a; --ink:#0e2822; --paper:#f1faf7; --soft:#dcf0ea; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2.5rem 1.2rem; }
+  h1 { font-size:2.2rem; color:var(--accent); }
+  p.lede { font-size:1.12rem; margin:.9rem 0 1.6rem; }
+  .boundary { margin-bottom:1.6rem; }
+  section { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1.1rem 1.2rem; margin-bottom:1.2rem; }
+  h2 { font-size:1.18rem; margin-bottom:.5rem; }
+  section p { font-size:.98rem; }
+  a.btn { display:inline-block; margin-top:1.4rem; background:var(--accent); color:#fff; text-decoration:none; padding:.8rem 1.6rem; border-radius:999px; font-size:1.05rem; }
+  footer { margin-top:2.2rem; font-size:.85rem; color:#4f8478; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Map Scale Math</h1>
+  <p class="lede">On a 1:24000 map, 2.5 cm is 600 m of real ground.</p>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    Map Scale Math works out map lengths, ground distances and scales from the lengths and scale you type. It assumes the map is drawn true to its stated scale. It does not know distortion, paper stretch or what a map actually shows. Check those where they apply.
+  </div>
+  <section>
+    <h2>The real truth</h2>
+    <p>2.5 cm on a 1:24000 map is 600 m on the ground, which is 0.6 km or 0.37 mi (each figure rounded to 2 decimal places).</p>
+  </section>
+  <section>
+    <h2>The map truth</h2>
+    <p>600 m on the ground is 25 mm on a 1:24000 map, which is 2.5 cm or 0.98 in (each figure rounded to 2 decimal places).</p>
+  </section>
+  <section>
+    <h2>The scale truth</h2>
+    <p>2.5 cm on the map for 600 m on the ground is a scale of exactly 1:24000.</p>
+  </section>
+  <a class="btn" href="app.html">Run your numbers</a>
+  <footer>Map Scale Math is exact arithmetic over the numbers you enter, nothing more.</footer>
+</main>
+</body>
+</html>
